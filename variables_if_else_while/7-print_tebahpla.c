@@ -1,16 +1,18 @@
 #include <stdio.h>
 /**
- * main-Numberz
+ *
+ * main - 
  *
  * Return: 0
  */
 int main(void)
 {
-	int a;
+	char b;
 
-	for (a = 15; a < 25; a++)
-		putchar(a);
+	for (a = 'z'; b >= 'a'; --b)
+		putchar(b);
 	putchar('\n');
 
 	return (0);
+
 }
