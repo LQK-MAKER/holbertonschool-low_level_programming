@@ -3,6 +3,7 @@
  *
  * Return: O
  */
+#include <stdio.h>
 int main(void)
 {
 	printf("size of a char: %zu byte(s)\n", sizeof(char));
