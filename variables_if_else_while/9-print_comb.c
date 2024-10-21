@@ -1,4 +1,4 @@
-#include
+#include <stdio.h>
 /**
  * main - 1
  *
@@ -14,8 +14,8 @@ int main(void)
 		putchar(z);
 		if (z != 57)
 		{
-			putchar(44)
-			putchar(32)
+			putchar(44);
+			putchar(32);
 			z++;
 		}
 		else
