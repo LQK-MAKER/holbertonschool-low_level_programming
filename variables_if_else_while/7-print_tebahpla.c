@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- *
- * main - 
+ * main - alphabet in reverse
  *
  * Return: 0
  */
