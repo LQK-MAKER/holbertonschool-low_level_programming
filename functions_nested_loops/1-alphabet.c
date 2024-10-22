@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Main - Prints alphabet
+ * Main - Prints alphabet betty est un enfer monstre mais bon tant pis c'est la bonne chose a faire
  *
  *Return: 0
  */
