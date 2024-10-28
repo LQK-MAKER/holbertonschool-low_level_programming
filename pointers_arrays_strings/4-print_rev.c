@@ -15,7 +15,7 @@
 
 		for (i = 0; i < as; i++)
 		{
-			fcounter--;
+			as--;
 			rev = s[i];
 			s[i] = s[as];
 			s[as] = rev;
