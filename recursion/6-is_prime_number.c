@@ -11,12 +11,23 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	for (int i = 2; i * i <= n; i++)
+	return (check_prime(n, 2));
+}
+/**
+ *check_prime - prime numbers
+ *@i:je sais pas
+ *@n:je sais pas
+ *Return: 0
+ */
+int check_prime(int n, int i)
+{
+	if (i * i > n)
 	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (1);
+	if (n % i == 0)
+	{
+		return (0);
+	}
+	return (check_prime(n, i + 1));
 }
