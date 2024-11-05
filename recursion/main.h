@@ -6,5 +6,4 @@ int is_prime_number(int n);
 int _sqrt_recursion(int n, int root);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
-int my_sqrt_recursion(int a, int b);
-int _sqrt(int n);
+int sqrt_a(int a, int b);
