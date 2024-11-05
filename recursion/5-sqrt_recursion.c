@@ -1,29 +1,33 @@
 #include "main.h"
+
 /**
- *_sqrt_recursion - je saispasasp
- * @root: je sais pas
- * @n: je sais pas
- * _sqrt: je sais paspasapsi
- * Return: je sais probablement pas
+ * sqrt_a - returns the natural square root of a number
+ * @a: input number
+ * @b: iterator
+ *
+ * Return: the resulting square root or -1
  */
-#include <stdio.h>
-int _sqrt_recursion(int n, int root)
+
+int sqrt_a(int a, int b)
 {
-	if (root * root == n)
+	if (b * b == a)
 	{
-		return (root);
+		return (b);
 	}
-	if (root * root > n)
+	else if (b * b > a)
 	{
 		return (-1);
 	}
-	return (_sqrt_recursion(n, root + 1));
+	return (sqrt_a(a, b + 1));
 }
-int _sqrt(int n)
+
+/**
+ * _sqrt_recursion -  returns the natural square root of a number
+ * @n: input number
+ * Return: natural square root
+ */
+
+int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	return (_sqrt_recursion(n, 0));
+	return (sqrt_a(n, 0));
 }
