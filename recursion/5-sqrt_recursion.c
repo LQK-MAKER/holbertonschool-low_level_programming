@@ -1,31 +1,45 @@
 #include "main.h"
 /**
- * my_sqrt_recursion - This is my my_sqrt_recursion
- *                     function about the square root
- * @a: The entry is equal to n, of the before function
- * @b: This is the sum
- *
- * Return: This is the result
+ *_sqrt_recursion - je saispasasp
+ * @root: je sais pas
+ * @n: je sais pas
+ * _sqrt: je sais paspasapsi
+ * Return: je sais probablement pas
  */
-int my_sqrt_recursion(int a, int b)
+#include <stdio.h>
+int _sqrt_recursion(int n, int root)
 {
-	if (a == (b * b))
-		return (b);
-	else if ((b * b) >= a)
+	if (root * root == n)
+	{
+		return (root);
+	}
+	if (root * root > n)
+	{
 		return (-1);
-	else
-		return (my_sqrt_recursion(a, b + 1));
+	}
+	return (_sqrt_recursion(n, root + 1));
+}
+int _sqrt(int n)
+{
+	if (n < 0)
+	{
+		return (-1);
+	}
+	return (_sqrt_recursion(n, 0));
 }
 
-/**
- * _sqrt_recursion - This is my first function
- * @n: This is my value
- *
- * Return: This is my result of the function my_sqrt_recursion
- */
-int _sqrt_recursion(int n)
+int main(void)
 {
-	if (n <= 0)
-		return (-1);
-	return (my_sqrt_recursion(n, 0));
+	int number = 16;
+	int result = _sqrt(number);
+
+	if (result == -1)
+	{
+		printf("No integer square root for %d\n", number);
+	}
+	else
+	{
+		printf("The square root of %d is %d\n", number, result);
+	}
+	return (0);
 }
