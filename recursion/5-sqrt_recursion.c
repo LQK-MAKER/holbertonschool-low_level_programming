@@ -27,19 +27,3 @@ int _sqrt(int n)
 	}
 	return (_sqrt_recursion(n, 0));
 }
-
-int main(void)
-{
-	int number = 16;
-	int result = _sqrt(number);
-
-	if (result == -1)
-	{
-		printf("No integer square root for %d\n", number);
-	}
-	else
-	{
-		printf("The square root of %d is %d\n", number, result);
-	}
-	return (0);
-}
