@@ -1,36 +1,45 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
- * main - adds positive numbers
+ * main - prints adds positive numbers
  * @argc: argument count
- * @argv: argument value
+ * @argv: argument vector
  *
  * Return: 0
  */
-int main (int argv, char *argv[]);
+int main(int argc, char *argv[])
 {
-	int sum = 0;
-		if (argc == 1)
-		{
-			printf("0\n");
-			return (0);
-		}
-	for (int i = 1; i < argc; i++)
+	int a;
+	unsigned int b, aze = 0;
+	char *c;
+
+	if (argc > 1)
 	{
-		for (int j = 0; argv[i][j] != '\0'; j++)
+		for (a = 1; a < argc; a++)
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			c = argv[a];
+
+			for (b = 0; b < strlen(c); b++)
 			{
-				printf("Error\n");
-				return (1);
+				if (c[b] < 48 || c[b] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			aze += atoi(c);
+			c++;
 		}
 
-		sum += atoi(argv[i]);
+		printf("%d\n", aze);
 	}
-
-	printf("%d\n", sum);
+	else
+	{
+		printf("0\n");
+	}
 
 	return (0);
 }
