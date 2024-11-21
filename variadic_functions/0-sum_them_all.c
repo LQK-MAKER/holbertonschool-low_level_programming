@@ -15,9 +15,9 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(tartenpion, n);
 
 	for (tibers = 0; tibers < n; tibers++)
-		sum += va_arg(tibers, int);
+		sum += va_arg(tartenpion, int);
 
-	va_end(tibers);
+	va_end(tartenpion);
 
 	return (sum);
 }
