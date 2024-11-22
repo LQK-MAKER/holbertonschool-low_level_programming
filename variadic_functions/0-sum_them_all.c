@@ -10,21 +10,22 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int a;
-	int b;
-	int result = 0;
-	va_list sum;
-
-	va_start(sum, n);
-
 	if (n == 0)
-		return (0);
-
-	for (a = 0; a < n; a++)
 	{
-		b = va_arg(sum, int);
-		result += b;
+		return (0);
 	}
-	va_end(sum);
-	return (result);
+
+	va_list args;
+
+	va_start(args, n);
+
+	int sum = 0;
+
+	for (unsigned int i = 0; i < n; i++)
+	{
+		sum += va_arg(args, int);
+	}
+
+	va_end(args);
+	return (sum);
 }
