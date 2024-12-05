@@ -1,7 +1,6 @@
 #include "lists.h"
-
-int _strlen_recursion(char *s);
-
+#include <stdlib.h>
+#include <string.h>
 /**
  * add_node - adds a new node at the beginning of a list_t list.
  * @head: pointer to the first element of the list.
@@ -29,17 +28,4 @@ list_t *add_node(list_t **head, const char *str)
 	*head = new;
 
 	return (new);
-}
-
-/**
- * _strlen_recursion - returns the length of a string.
- * @s: string.
- * Return: length of @s.
- */
-int _strlen_recursion(char *s)
-{
-	if (*s == 0)
-		return (0);
-	else
-		return (1 + _strlen_recursion(s + 1));
 }
